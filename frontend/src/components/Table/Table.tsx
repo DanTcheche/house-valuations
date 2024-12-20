@@ -17,7 +17,7 @@ const Table = () => {
       <table className="bg-white border border-gray-200">
         <TableHeader>
           <TableRow>
-            <TableHead />
+            <TableHead key={-1} />
             {data.map((provider) => (
               <TableHead key={provider.id} text={`Provider ${provider.id}`} />
             ))}
