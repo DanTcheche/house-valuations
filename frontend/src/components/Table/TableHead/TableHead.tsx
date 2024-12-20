@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
 
 interface TableHeadProps extends React.ComponentPropsWithoutRef<"th"> {
-  key: number;
+  key: number | string;
   text?: string;
 }
 
