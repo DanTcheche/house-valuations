@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     PROJECT_NAME: str = "House Valuations"
     BACKEND_CORS_ORIGINS: Union[str, List[Any]] = []
+    REQUESTS_TIMEOUT_SECONDS: int = 10
 
     # Logging
     LOG_JSON_FORMAT: bool = False
