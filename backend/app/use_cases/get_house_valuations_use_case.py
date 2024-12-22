@@ -1,4 +1,5 @@
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import logging
 from typing import List
 
 from app.adapters.property_adapters.base_property_adapter import (
@@ -7,6 +8,9 @@ from app.adapters.property_adapters.base_property_adapter import (
 from app.adapters.property_adapters.provider_1 import Provider1PropertyAdapter
 from app.adapters.property_adapters.provider_2 import Provider2PropertyAdapter
 from app.schemas.properties.property_schema import PropertySchema
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class GetHouseValuationUseCase:
@@ -32,7 +36,7 @@ class GetHouseValuationUseCase:
                     if data:
                         results.append(data)
                 except Exception as exc:
-                    print(f"{adapter} generated an exception: {exc}")
+                    logger.info(f"{adapter} generated an exception: {exc}")
         return results
 
     def __fetch_data_from_adapter(
