@@ -1,4 +1,5 @@
 from abc import ABC
+import logging
 from typing import Any, Optional, Tuple
 
 import requests
@@ -9,11 +10,13 @@ from app.core.config import get_settings
 
 settings = get_settings()
 
+logger = logging.getLogger(__name__)
 
-class BaseRequestClient(ABC):
+
+class RequestClient:
     base_url: Optional[str] = None
 
-    def _make_request(
+    def make_request(
         self,
         endpoint: str,
         method: str,
@@ -40,4 +43,11 @@ class BaseRequestClient(ABC):
             return response.json()
 
         except requests.exceptions.RequestException as error:
+            logger.error(str(endpoint))
+            logger.error(str(error))
+            logger.error(str(data))
+            logger.error(str(params))
+            logger.error(
+                f"response: {error.response.text if error.response else None}"
+            )
             return None
