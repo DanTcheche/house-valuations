@@ -33,8 +33,6 @@ class GetHouseValuationUseCase:
                         results.append(data)
                 except Exception as exc:
                     print(f"{adapter} generated an exception: {exc}")
-        print(results)
-        print(type(results[0]))
         return results
 
     def __fetch_data_from_adapter(
