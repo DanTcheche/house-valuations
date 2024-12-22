@@ -24,7 +24,6 @@ class Settings(BaseSettings):
     LOG_JSON_FORMAT: bool = False
     LOG_LEVEL: int = logging.INFO
 
-
     @field_validator("BACKEND_CORS_ORIGINS", mode="before")
     @classmethod
     def assemble_cors_origins(

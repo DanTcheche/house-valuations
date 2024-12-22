@@ -1,10 +1,7 @@
-from abc import ABC
 import logging
 from typing import Any, Optional, Tuple
 
 import requests
-
-from app.core.config import settings
 
 from app.core.config import get_settings
 
