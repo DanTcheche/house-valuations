@@ -6,5 +6,7 @@ from fastapi import (
 api_router = APIRouter()
 
 api_router.include_router(
-    house_valuations.router, prefix="/house-valuations", tags=["house-valuations"]
+    house_valuations.router,
+    prefix="/house-valuations",
+    tags=["house-valuations"],
 )
