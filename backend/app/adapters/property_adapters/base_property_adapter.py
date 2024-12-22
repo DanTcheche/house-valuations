@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
-from backend.app.schemas.property_schema import PropertySchema
+from app.schemas.properties.property_schema import PropertySchema
 
 
 class BasePropertyAdapter(ABC):
-
     def __init__(self, endpoint: str, api_key: str) -> None:
         self.endpoint = endpoint
         self.api_key = api_key
