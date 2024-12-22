@@ -25,7 +25,9 @@ class Provider2PropertyAdapter(BasePropertyAdapter):
         super().__init__(endpoint, api_key)
 
     def get_property_by_address(self, address: str) -> PropertySchema:
-        logger.info(f"Fetching property data from Provider 2 for address: {address}")
+        logger.info(
+            f"Fetching property data from Provider 2 for address: {address}"
+        )
         property_by_address = RequestClient().make_request(
             endpoint=self.endpoint,
             method="GET",
@@ -37,7 +39,9 @@ class Provider2PropertyAdapter(BasePropertyAdapter):
             raise ExternalProviderException(
                 "Provider 2 failed to return data."
             )
-        logger.info(f"Property data fetched from Provider 2: {property_by_address}")
+        logger.info(
+            f"Property data fetched from Provider 2: {property_by_address}"
+        )
         return PropertySchema.from_provider_1(
             Provider2PropertySchema.model_validate(
                 property_by_address.get("data")

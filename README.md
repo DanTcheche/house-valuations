@@ -27,5 +27,14 @@ Full stack application to compare house valuations.
 
 Once the Docker containers are up and running, you can access the application via your web browser at `http://localhost:5173`.
 
+**If the application in the frontend is being access from another port make sure to add that url to the BACKEND_CORS_ORIGINS array and restart the BE server or the API will fail**
+
+
+### Docs
+
+`http://localhost:8000/docs`
+
 ### Code Considerations and Architecture Improvements
 - Provider data such as API keys and endpoints could be stored in a database. Due to time constraints, they are currently stored in environment variables.
+- The list of provider adapters to be ran could also be retrieved from a database based on different conditions (like a provider being active) and that list could be used in the use case.
+- Depending on the reliability of the providers we could cache the response in our own system, such as Redis, to improve response time and avoid third party errors. That cache would need to be cleared every 24 hours or depending on the provider conditions of cache clear
