@@ -40,7 +40,6 @@ class TestGetHouseValuationsUseCase:
         assert len(result) == 2
         assert isinstance(result[0], PropertySchema)
         assert isinstance(result[1], PropertySchema)
-        print(result[0])
         assert result[0] == PropertySchema(
             id="1180-6Th-Avenue-New-York-NY-10036",
             provider="Provider 1",
@@ -56,7 +55,6 @@ class TestGetHouseValuationsUseCase:
             sale_price=204716,
         )
         
-        print(result[1])
         assert result[1] == PropertySchema(
             id="1180-6Th-Avenue-New-York-NY-10036",
             provider="Provider 2",
