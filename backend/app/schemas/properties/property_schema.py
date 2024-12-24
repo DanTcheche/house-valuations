@@ -34,7 +34,9 @@ class PropertySchema(BaseModel):
             provider="Provider 1",
             address=provider_1_response.formattedAddress,
             square_footage=provider_1_response.squareFootage,
-            lot_size_acres=round(provider_1_response.lotSizeSqFt / ACRES_IN_FEET, 2),
+            lot_size_acres=round(
+                provider_1_response.lotSizeSqFt / ACRES_IN_FEET, 2
+            ),
             year_built=provider_1_response.yearBuilt,
             property_type=provider_1_response.propertyType,
             bedrooms=provider_1_response.bedrooms,

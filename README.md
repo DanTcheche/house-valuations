@@ -38,3 +38,8 @@ Once the Docker containers are up and running, you can access the application vi
 - Provider data such as API keys and endpoints could be stored in a database. Due to time constraints, they are currently stored in environment variables.
 - The list of provider adapters to be ran could also be retrieved from a database based on different conditions (like a provider being active) and that list could be used in the use case.
 - Depending on the reliability of the providers we could cache the response in our own system, such as Redis, to improve response time and avoid third party errors. That cache would need to be cleared depending on the provider conditions or business rules.
+
+
+### Run tests
+
+`docker compose exec api ./scripts/tests.sh`
