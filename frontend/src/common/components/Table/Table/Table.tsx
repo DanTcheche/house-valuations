@@ -16,8 +16,11 @@ export const Table = ({ data }: TableProps) => {
         <TableHeader>
           <TableRow>
             <TableHead key={"header"} />
-            {data.map((provider) => (
-              <TableHead key={provider.id} text={`Provider ${provider.id}`} />
+            {data.map((houseValuation) => (
+              <TableHead
+                key={houseValuation.id}
+                text={houseValuation.provider}
+              />
             ))}
           </TableRow>
         </TableHeader>
