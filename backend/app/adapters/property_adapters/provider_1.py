@@ -27,12 +27,7 @@ class Provider1PropertyAdapter(BasePropertyAdapter):
         logger.info(
             f"Fetching property data from Provider 1 for address: {address}"
         )
-        property_by_address = RequestClient().make_request(
-            endpoint=self.endpoint,
-            method="GET",
-            headers={"X-API-KEY": self.api_key},
-            params={"address": address},
-        )
+        property_by_address = super()._get_data_from_provider(address)
         if not property_by_address or not property_by_address.get("data"):
             logger.warning("Provider 1 failed to return data.")
             raise ExternalProviderException(

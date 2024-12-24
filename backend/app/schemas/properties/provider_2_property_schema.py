@@ -8,7 +8,7 @@ class Provider2PropertySchema(BaseModel):
     SquareFootage: int
     LotSizeAcres: float
     YearConstructed: int
-    ArchitecturalStyle: str
+    PropertyType: str
     Bedrooms: int
     Bathrooms: int
     RoomCount: int

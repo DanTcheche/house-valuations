@@ -34,7 +34,7 @@ class PropertySchema(BaseModel):
             provider="Provider 1",
             address=provider_1_response.formattedAddress,
             square_footage=provider_1_response.squareFootage,
-            lot_size_acres=provider_1_response.lotSizeSqFt / ACRES_IN_FEET,
+            lot_size_acres=round(provider_1_response.lotSizeSqFt / ACRES_IN_FEET, 2),
             year_built=provider_1_response.yearBuilt,
             property_type=provider_1_response.propertyType,
             bedrooms=provider_1_response.bedrooms,
@@ -49,13 +49,13 @@ class PropertySchema(BaseModel):
         cls, provider_2_response: Provider2PropertySchema
     ) -> Self:
         return PropertySchema(
-            id=provider_2_response.id,
+            id=provider_2_response.ID,
             provider="Provider 2",
             address=provider_2_response.NormalizedAddress,
             square_footage=provider_2_response.SquareFootage,
             lot_size_acres=provider_2_response.LotSizeAcres,
             year_built=provider_2_response.YearConstructed,
-            property_type=provider_2_response.ArchitecturalStyle,
+            property_type=provider_2_response.PropertyType,
             bedrooms=provider_2_response.Bedrooms,
             bathrooms=provider_2_response.Bathrooms,
             room_count=provider_2_response.RoomCount,
