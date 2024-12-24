@@ -1,0 +1,30 @@
+{
+  "data": {
+      "ID": "1180-6Th-Avenue-New-York-NY-10036",
+      "NormalizedAddress": "1180 6Th Avenue New York NY 10036",
+      "Address1": "1180 6Th Avenue",
+      "Address2": "Apt 12",
+      "City": "New York",
+      "State": "NY",
+      "PostalCode": "10036",
+      "ArchitecturalStyle": "Ranch",
+      "PropertyType": "Single Family",
+      "Bedrooms": 1,
+      "Bathrooms": 2,
+      "SquareFootage": 3968,
+      "LotSizeAcres": 0.14,
+      "YearConstructed": 1946,
+      "HomeownerAssociationFee": 353,
+      "LastSaleDate": "2020-03-05T00:00:00.000Z",
+      "LastSalePrice": 204716,
+      "RoomCount": 9,
+      "UnitCount": 2,
+      "GarageSpaces": 3,
+      "GarageType": "Attached",
+      "SepticSystem": false,
+      "Cooling": "Central",
+      "Heating": "Electric",
+      "SalePrice": 204716
+  },
+  "cached": false
+}

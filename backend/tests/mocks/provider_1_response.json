@@ -1,0 +1,73 @@
+{
+  "data": {
+      "id": "1180-6Th-Avenue-New-York-NY-10036",
+      "formattedAddress": "1180 6Th Avenue New York NY 10036",
+      "addressLine1": "1180 6Th Avenue",
+      "addressLine2": "Apt 12",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10036",
+      "county": "Unknown",
+      "latitude": 35.153039,
+      "longitude": -84.655792,
+      "propertyType": "Single Family",
+      "bedrooms": 1,
+      "bathrooms": 2,
+      "squareFootage": 3968,
+      "lotSizeSqFt": 5949,
+      "yearBuilt": 1946,
+      "assessorID": "26757-557-3151",
+      "legalDescription": "CB 6347 BLK 10 LOT 90",
+      "subdivision": "Subdivision A",
+      "zoning": "RH",
+      "lastSaleDate": "2020-03-05T00:00:00.000Z",
+      "lastSalePrice": 204716,
+      "hoa": {
+          "fee": 353
+      },
+      "features": {
+          "architectureType": "Ranch",
+          "cooling": true,
+          "coolingType": "Central",
+          "exteriorType": "Brick",
+          "fireplace": true,
+          "fireplaceType": "Masonry",
+          "floorCount": 1,
+          "foundationType": "Slab",
+          "garage": true,
+          "garageSpaces": 3,
+          "garageType": "Attached",
+          "heating": true,
+          "heatingType": "Electric",
+          "pool": false,
+          "poolType": "Vinyl",
+          "roofType": "Tile",
+          "roomCount": 9,
+          "unitCount": 2,
+          "viewType": "City",
+          "septicSystem": false
+      },
+      "taxAssessments": {
+          "2023": {
+              "year": 2023,
+              "value": 260345,
+              "land": 62425,
+              "improvements": 90760
+          }
+      },
+      "propertyTaxes": {
+          "2023": {
+              "year": 2023,
+              "total": 7849
+          }
+      },
+      "history": {
+          "2022-02-02": {
+              "event": "Sale",
+              "date": "2020-02-16T00:00:00.000Z",
+              "price": 420003
+          }
+      }
+  },
+  "cached": true
+}
