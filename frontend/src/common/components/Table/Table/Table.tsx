@@ -4,13 +4,11 @@ import { TableHead } from "../TableHead";
 import { TableHeader } from "../TableHeader";
 import { TableRow } from "../TableRow";
 
-const data = [
-  { id: 1, name: "Item 1", amount: 100, description: "Description 1" },
-  { id: 2, name: "Item 2", amount: 200 },
-  { id: 3, name: "Item 3", amount: 300, notes: "Some notes" },
-];
+interface TableProps {
+  data: any[];
+}
 
-export const Table = () => {
+export const Table = ({ data }: TableProps) => {
   const keys = Array.from(new Set(data.flatMap(Object.keys)));
   return (
     <div className="grid place-items-center overflow-x-auto">

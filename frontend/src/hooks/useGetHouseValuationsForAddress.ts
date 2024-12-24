@@ -1,4 +1,4 @@
-import { useQuery } from "react-query";
+import { useQuery } from "@tanstack/react-query";
 
 import { PropertyInterface } from "@/interfaces/propertyInterface";
 import { getHouseValuationsForAddress } from "@/api/houseValuations";
