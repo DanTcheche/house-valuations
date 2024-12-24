@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import type { Location } from "react-router-dom";
 import { ROUTES } from "./routes";
-import { Layout } from "@/components/Layout";
-import Table from "@/components/Table/Table";
+
+import { Layout, Table } from "@/common/components";
 
 export const Router = () => {
   const location = useLocation();
