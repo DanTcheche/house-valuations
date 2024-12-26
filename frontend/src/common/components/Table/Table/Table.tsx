@@ -31,7 +31,7 @@ export const Table = ({ data }: TableProps) => {
               {data.map((provider) => (
                 <TableCell
                   key={`${provider.id}-${provider.provider}-${key}`}
-                  text={provider[key] ? provider[key] : "N/A"}
+                  text={provider[key] ? `${provider[key]}` : "N/A"}
                 />
               ))}
             </TableRow>
