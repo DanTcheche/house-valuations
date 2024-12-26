@@ -29,6 +29,10 @@ Once the Docker containers are up and running, you can access the application vi
 
 **If the application in the frontend is being access from another port make sure to add that url to the BACKEND_CORS_ORIGINS array and restart the BE server or the API will fail**
 
+To reset env variables run:
+```sh
+    docker compose up -d --build
+    ```
 
 ### Docs
 
