@@ -11,14 +11,14 @@ interface TableProps {
 export const Table = ({ data }: TableProps) => {
   const keys = Array.from(new Set(data.flatMap(Object.keys)));
   return (
-    <div className="grid place-items-center overflow-x-auto">
+    <div className="grid place-items-center overflow-x-auto overflow-y-auto max-w-full max-h-full">
       <table className="bg-white border border-gray-200">
         <TableHeader>
           <TableRow>
             <TableHead key={"header"} />
             {data.map((houseValuation) => (
               <TableHead
-                key={houseValuation.id}
+                key={`${houseValuation.id}-${houseValuation.provider}`}
                 text={houseValuation.provider}
               />
             ))}
@@ -30,7 +30,7 @@ export const Table = ({ data }: TableProps) => {
               <TableHead key={key} text={key} />
               {data.map((provider) => (
                 <TableCell
-                  key={provider.id}
+                  key={`${provider.id}-${provider.provider}-${key}`}
                   text={provider[key] ? provider[key] : "N/A"}
                 />
               ))}
