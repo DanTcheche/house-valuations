@@ -32,7 +32,7 @@ Once the Docker containers are up and running, you can access the application vi
 To reset env variables run:
 ```sh
     docker compose up -d --build
-    ```
+```
 
 ### Docs
 
